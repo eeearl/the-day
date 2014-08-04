@@ -22,6 +22,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func setupView() {
         let navigationbarHeight = self.navigationController.navigationBar.frame.origin.y
         self.segmented = UISegmentedControl(items: ["a", "b"])
+        self.segmented.selectedSegmentIndex = 0
         self.segmented.setTranslatesAutoresizingMaskIntoConstraints(false)
         
         self.view.addSubview(self.segmented)
@@ -35,7 +36,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.view.addSubview(self.tableView)
         
         let viewsDictionary = ["segmented":self.segmented, "tableView":self.tableView]
-        let segmentContrainPosV = NSLayoutConstraint.constraintsWithVisualFormat("V:[segmented(44)]", options: NSLayoutFormatOptions.AlignAllBaseline, metrics: nil, views: viewsDictionary)
+        let segmentContrainPosV = NSLayoutConstraint.constraintsWithVisualFormat("V:[segmented(30)]", options: NSLayoutFormatOptions.AlignAllBaseline, metrics: nil, views: viewsDictionary)
         let segmentContrainPosH = NSLayoutConstraint.constraintsWithVisualFormat("H:|-10-[segmented]-10-|", options: NSLayoutFormatOptions.AlignAllBaseline, metrics: nil, views: viewsDictionary)
         
         self.view.addConstraints(segmentContrainPosV)

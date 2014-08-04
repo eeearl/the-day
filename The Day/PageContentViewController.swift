@@ -14,9 +14,6 @@ class PageContentViewController: UIViewController {
     var titleText : String = ""
     var imageFile : String = ""
 
-    @IBOutlet strong var backgroundImageView: UIImageView!
-    @IBOutlet strong var titleLabel: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
